@@ -1,13 +1,31 @@
+function constructJSON(collection) {
+  const type = collection.modelName;
+  let models = collection.models;
+  let arrOfObjs = [];
+  let band = {};
+
+
+  for (let model of models) {
+    band.id = model.attrs.id;
+    band.type = type;
+    band.attributes = model.attrs;
+    arrOfObjs.push(band);
+    band = {};
+  }
+
+  return arrOfObjs;
+}
+
 export default function() {
   this.namespace = '/api';
-  
-  this.get('/bands', function( { bands }) {
-    debugger;
-
-    return bands.all();
-
-    /*return JSON.stringify({
-      bandsArr
-    });*/
+  this.get('/bands', function( {bands} ) {
+    return {
+      "data": constructJSON(bands.all())
+    }
   });
+  this.get('/bands/:id', function( {bands} ) {
+    return {
+      "data": constructJSON(bands.all())
+    }
+  })
 }
