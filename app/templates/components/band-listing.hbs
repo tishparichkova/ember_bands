@@ -1,7 +1,8 @@
-
-<p class="band-item-list">
-    {{band.name}}
-</p>
-<p>
-    <img src="{{band.image}}" alt="{{band.name}}">
-</p>
+<div class="band-container">
+    <p class="band-container__band-title">
+        {{band.name}}
+    </p>
+    <div class="band-container__band-image-holder {{if isWide "image--wide"}}">
+        <img class="band-image-holder__image" src="{{band.image}}" alt="{{band.name}}">
+    </div>
+</div>

@@ -1,10 +1,16 @@
-<div>
-    {{#each bands as |band|}}
-        {{#link-to "bands.songs" band.id}}
-            {{band-listing
-                band=band
-            }}
-        {{/link-to}}
-    {{/each}}
-</div>
-tish: {{outlet}}
+<main class="main-container">
+    <div class="band-item-holder">
+        {{#each bands as |band|}}
+            <div class="band-item-holder__link">
+                {{#link-to "bands.songs" band.id}}
+                    {{band-listing
+                        band=band
+                    }}
+                {{/link-to}}
+            </div>
+        {{/each}}
+    </div>
+    <div class="songs-container">
+        {{outlet}}
+    </div>
+</main>
