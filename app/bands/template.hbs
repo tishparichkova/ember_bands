@@ -1,12 +1,9 @@
 <div>
     {{#each bands as |band|}}
         {{#link-to "bands.songs" band.id}}
-          <p class="test-tihomira">
-              {{band.name}}
-          </p>
-          <p>
-              <img src="{{band.image}}" alt="{{band.name}}">
-          </p>
+            {{band-listing
+                band=band
+            }}
         {{/link-to}}
     {{/each}}
 </div>
