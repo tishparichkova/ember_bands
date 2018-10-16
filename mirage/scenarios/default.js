@@ -1,5 +1,3 @@
-import bands from "../factories/bands";
-
 export default function(server) {
   let listOfBands = [
     {
@@ -15,7 +13,7 @@ export default function(server) {
     {
       name: 'Foo Fighters',
       image: 'https://cps-static.rovicorp.com/3/JPG_400/MI0004/260/MI0004260585.jpg?partner=allrovi.com',
-      songs: ['Black Dog', 'All my Love']
+      songs: ['War', 'No way back']
     }
   ];
   
