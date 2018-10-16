@@ -23,9 +23,16 @@ export default function() {
       "data": constructJSON(bands.all())
     }
   });
-  this.get('/bands/:id', function( {bands} ) {
-    return {
-      "data": constructJSON(bands.all())
+
+  this.get('/bands/:id', function(db, request) {
+    let id = request.params.id ? request.params.id : 1;
+    
+    return { 
+      data: {
+        type: "bands",
+        id: id,
+        attributes: db.bands.find(id)
+      }
     }
-  })
+  });
 }
