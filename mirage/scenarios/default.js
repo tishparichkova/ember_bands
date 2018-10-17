@@ -14,6 +14,16 @@ export default function(server) {
       name: 'Foo Fighters',
       image: 'https://cps-static.rovicorp.com/3/JPG_400/MI0004/260/MI0004260585.jpg?partner=allrovi.com',
       songs: ['War', 'No way back']
+    },
+    {
+      name: 'Red Hot Chilli Peppers',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIHI_nUlGEBftc3RiSFqCcuxqeHa2PG-LngnwGH_mx-1SM5cIvGA',
+      songs: ['Snow', 'Otherside', 'Californication']
+    },
+    {
+      name: 'Nirvana',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToiT5ZzVGW_29Jb6Z49muRehkaYtrac7ytHGsDcKMjNVxVWw2yQw',
+      songs: ['Heart-shaped box', 'Smells like teenage spirit']
     }
   ];
   
