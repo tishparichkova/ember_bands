@@ -1,9 +1,13 @@
 import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
-    normalizeResponse({ payload }) {
+    normalizeResponse(...args) {
+
+        // let [ , , { data }] = args;
+        const { data } = args[2];
+
         return {
-            data: payload.data,
+            data
         };
     },
 });
