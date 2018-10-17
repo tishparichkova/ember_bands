@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.RESTSerializer.extend({
-    normalizeResponse(store=undefined, primaryModelClass=undefined,payload={},requestType="GET",returns={}) {
+    normalizeResponse({ payload }) {
         return {
             data: payload.data,
         };
