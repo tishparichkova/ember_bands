@@ -35,13 +35,12 @@
     text-decoration: none;
     color: #000;
     margin: 0 10px;
+    flex-basis: 50%;
 }
 
 .band-container__band-image-holder {
     width: 150px;
     height: 75px;
-    display: flex;
-    align-items: center;
 }
 
 .band-container__band-image-holder.image--wide {
@@ -52,10 +51,4 @@
 .band-image-holder__image {
     width: 100%;
     height: auto;
-}
-
-.band-item-holder__link:hover {
-    background-color: green;
-    color: $bands-header-bg-color;
-    background-color: $bands-header-color;
 }
