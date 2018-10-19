@@ -4,9 +4,11 @@ html,
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: #eeeeee;
 }
 
-.site-information {
+.site-information,
+.site-information-footer {
     background-color: $bands-header-bg-color;
     box-sizing: border-box;    
     color: $bands-header-color;
@@ -15,9 +17,10 @@ body {
     width: 100%;
     font-weight: bold;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
-.site-information__title {
-    
+.site-information-footer {
+    position: fixed;
+    bottom: 0;
 }

@@ -1,16 +1,17 @@
 <main class="main-container">
-    <div class="band-item-holder">
-        {{#each bands as |band|}}
-            <div class="band-item-holder__link">
-                {{#link-to "bands.songs" band.id}}
-                    {{band-listing
-                        band=band
-                    }}
-                {{/link-to}}
-            </div>
-        {{/each}}
-    </div>
-    <div class="songs-container">
-        {{outlet}}
-    </div>
+  <div class="band-item-holder">
+    {{#each bands as |band|}}
+      <div {{action "sendData"}} class="band-item-holder__link">
+        {{#link-to "bands.songs" band.id}}
+          {{band-listing
+            sendData=(action "sendData")
+            band=band
+          }}
+        {{/link-to}}
+      </div>
+    {{/each}}
+  </div>
+  <div class="songs-container">
+    {{outlet}}
+  </div>
 </main>
